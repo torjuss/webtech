@@ -1,0 +1,16 @@
+body {
+    background-color: wheat;
+}
+
+header {
+    font-family: "Helvetica", cursive, sans-serif;
+}
+
+p {
+    font-family: "Helvetica", "Arial", cursive, sans-serif;
+}
+
+img {
+    max-width: 150px;
+    border: 2px groove gray;
+}

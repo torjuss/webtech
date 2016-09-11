@@ -1,0 +1,16 @@
+1. Inline style CSS overrides rules defined in style elements and external style sheets because they are 
+considered more local to the html document. Inline styles have highest priority, then embedded and lastly 
+external CSS.
+
+2. In CSS "id" should be used when we want a specific styling for a unique element in an html document. 
+"class" should be used when we want to apply the same style to several different elements.
+
+3. RGBA means "Red, Green, Blue, Alpha" and is a model for representing colors digitally. The alpha
+value is normally used to represent opacity (level of transparency). It can represent 256 to the power of 3
+different variations of color (16.8 million) and 256 levels of opacity.
+
+4. We include CCS in the head element because it is considered best practice to link external resources in
+the head tag.
+
+5. The CSS selector that matches all the p elements inside the article element is "article p". By specifying
+"article" we make sure that the "p" outisde of the article elements is omitted.
