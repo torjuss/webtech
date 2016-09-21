@@ -1,0 +1,10 @@
+1. The difference between absolute and fixed position is that an element with fixed 
+position is always positioned in relation to the browser window and is not affected by 
+scrolling. Therefore it is often used for "sticky" navigation bars. An element with 
+absolute position is positioned in relation to it's parent element. So if the parent is
+larger than the browser window the element will follow the parent and may be invisible
+unless you use the scrollbar.
+
+2. We access the 3rd element within another element by using the CSS pseudo class 
+":nth-child(n)" with n set to 3. For example you get the 3rd list item inside an 
+unordered list with: "ul li:nth-child(3)".

@@ -1,0 +1,26 @@
+﻿body {
+    min-height: 100%;
+    margin: 0 20px;
+}
+
+.wrapper {
+    min-height: inherit;
+    position: absolute;
+}
+
+ul {
+    list-style: square;
+}
+
+    ul ul :last-child {
+        color: blue;
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+.footer {
+    color: red;
+    border: 1px solid;
+    position: absolute;
+    bottom: 0px;
+}
