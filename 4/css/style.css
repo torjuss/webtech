@@ -1,40 +1,45 @@
-  * {
+* {
     margin: 0;
     padding: 0;
-  }
+}
 
-  body {
+body {
     background: white;
     font-family: arial, sans-serif;
-  }
+}
 
-  #screen {
+#screen {
     position: relative;
-  }
+}
 
-  video {
+video {
     height: auto;
     width: 100%;
-  }
-    
-  #title {
+}
+
+#title {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
 
-  #title > img {
-    width: 100%;
-  }
+    #title > img {
+        width: 100%;
+    }
 
-  article {
-    width: 720px;
-    margin: 20px 50px;
-  }
+article {
+    margin: 20px 20%;
+}
 
-  p {
+p {
     color: black;
     font-size: 16px;
     line-height: 1.5;
-  }
+}
+
+@media (max-width: 940px) {
+    video {
+        
+    }
+}
