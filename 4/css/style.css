@@ -38,8 +38,15 @@ p {
     line-height: 1.5;
 }
 
-@media (max-width: 940px) {
-    video {
-        
+/*The assignment says to replace the video with an image for mobile devices 
+    (with a resolution lower than 940), so I chose to use "max-device-width", 
+    but "max-width" could be used for testing on a computer by making the 
+    browser window narrower.
+*/
+/*@media (max-width: 940px) {*/
+@media (max-device-width: 940px) {
+    #video {
+        width: 100%;
+        content: url("../img/hovedbygget.png");
     }
 }

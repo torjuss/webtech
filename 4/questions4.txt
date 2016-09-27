@@ -1,0 +1,21 @@
+1. Mobile phones usually ignore autoplay on video elements because the bandwidth is often 
+poor on mobile phones compared to devices that use only wi-fi or ethernet connection. Furthermore 
+mobile phones usually have a plan with limited amount of data to spend so the user may want to 
+limit how much content he downloads from the web, and a video is a lot of data compared to 
+text and images.
+
+2. The CSS snippet will hide all elements inside the element with id "logo". This is smart to
+do when we want to hide items without deleting and recreating them, so that we can easily
+show them again later. It is also different from "visibility: hidden" because the latter
+still makes elements take up the same space as before, whilst "display:none" doesn't.
+
+3. Advantages of having a single responsive website instead of dedicated versions for mobile 
+and desktop:
+
+	a. Less maintenance and time spent on developing the site.
+	b. Avoids code redundancy which reduces the risk for making errors during development.
+	c. Users only have to care about one domain name for the page.
+	d. Predictable behaviour (if the web developer has made a good responsive design).
+	   The content of the page is the same no matter where it is accessed.
+	e. Flexibility. Easy to make the page work for different devices and screen resolution.
+	f. Reduces costs related to hosting the web page and buying a domain name.
