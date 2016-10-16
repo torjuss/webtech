@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <script type="text/javascript" src="script.js" async></script>
+    <!-- Part 1: It seems like you want us to include the script at the bottom
+    of the body to make sure it does not stop the loading of html, but
+    by using the "async" keyword you can actually put it in the head.
+    This way the script is loaded and executed asynchronously, while the
+    page continous to parse html: http://www.w3schools.com/tags/att_script_async.asp -->
     <meta charset="utf-8">
     <title>IT2805 assignment 5: JavaScript introduction</title>
 
@@ -33,9 +40,9 @@
 
     <h2>Part 5</h2>
     <div class="buttons">
-      <button>Display: none </button>
-      <button>Visibility: hidden</button>
-      <button>Reset</button>
+      <button onclick="changeDisplay()">Display: none </button>
+      <button onclick="changeVisibility()">Visibility: hidden</button>
+      <button onclick="reset()">Reset</button>
     </div>
     <div class="box" id='magic'> 1 </div>
     <div class="box"> 2 </div>
