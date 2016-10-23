@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: inherit;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 50%;
+  padding: 8px;
+}
+
+fieldset {
+  margin: 8px 0;
+}
+
+p {
+  margin: 8px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+}

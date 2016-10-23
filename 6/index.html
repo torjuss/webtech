@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Norwegian Tax Administration - Tax form</title>
-    </head>
-    <body>
-        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
 
-        </form>
-    </body>
+<head>
+  <title>Norwegian Tax Administration - Tax form</title>
+  <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script type="text/javascript" src="script.js" async></script>
+</head>
+
+<body>
+  <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" name="taxform" method="post">
+    <h1>Tax form</h1>
+    <p>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name..." required />
+    </p>
+    <fieldset>
+      <legend>Gender</legend>
+      <ul>
+        <li>
+          <p>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female" required />
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" />
+          </p>
+        </li>
+      </ul>
+    </fieldset>
+    <p>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email address..." required />
+    </p>
+    <p>
+      <label for="birthdate">Date of birth</label>
+      <input type="date" name="birthdate" id="birthdate" max="1987-12-31" value="1987-12-31" required />
+    </p>
+    <p>
+      <label for="hero">Hero name</label>
+      <input type="text" name="hero" id="hero" placeholder="Enter your hero name..." required />
+    </p>
+    <fieldset>
+      <legend>Do you wear spandex?</legend>
+      <ul>
+        <li>
+          <p>
+            <label for="spandex">Yes</label>
+            <input type="radio" name="spandex" id="spandex" value=true required />
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="no-pandex">No</label>
+            <input type="radio" name="spandex" id="no-spandex" value=false />
+          </p>
+        </li>
+      </ul>
+    </fieldset>
+    <p>
+      <label for="strength">Strength</label>
+      <input type="number" name="strength" id="strength" min=1 max=10 value=5 step=1 />
+    </p>
+    <p>
+      <label for="speed">Speed</label>
+      <input type="number" name="speed" id="speed" min=1 max=10 value=5 step=1 />
+    </p>
+    <p>
+      <label for="intelligence">Intelligence</label>
+      <input type="number" name="intelligence" id="intelligence" min=1 max=10 value=5 step=1 />
+    </p>
+    <fieldset>
+      <legend>Tax information</legend>
+      <p>
+        <label for="income">Income</label>
+        <input type="number" name="income" id="income" min=0 value=0 />
+      </p>
+      <p>
+        <label for="wealth">Wealth</label>
+        <input type="number" name="wealth" id="wealth" min=0 value=0 />
+      </p>
+      <p>
+        <label for="tax">Tax</label>
+        <input type="number" name="tax" id="tax" readonly />
+      </p>
+    </fieldset>
+    <p>
+      <input type="submit" value="Submit tax form" />
+    </p>
+  </form>
+</body>
+
 </html>
