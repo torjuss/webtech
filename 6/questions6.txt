@@ -1,0 +1,28 @@
+1. Why does the following expression 0.1 + 0.2 === 0.3 evaluate to false in Javascript?
+
+    Because math operations on computers are performed with binary numbers and during
+    transformation from decimal to binary there may be precision loss. For instance
+    could "0.1 + 0.2" evaluate to 0.3000000005 instead of exactly 0.3.
+
+2. What does the method attribute on a form element decide?
+
+    The method attribute specifies which method we should use to send the data in the form. GET is for
+    data that are not sensitive and can be cached, whilst POST is for sensitive data that
+    requires security (like passwords) and cannot be cached.
+
+3. Explain why the form fields appear in the URL when the method on form element is changed to GET ?
+
+    The form fields appear in the URL so that they can be cached and saved in bookmarks. Typically
+    we use GET requests to fetch information or data and therefore it is nice to see the parameters
+    that the method uses, and to be able to save a query.
+
+4. Why is it considered bad practice to only validate form input with HTML5 and/or Javascript?
+
+    You need server-side validation as well. Client-side validation (HTML and Javascript) is
+    only meant to improve the user experience and make sure all input is specified. Users can
+    still access server data without going through the form (web page) and do harmful things.
+
+5. When is it appropriate to use textarea over input ?
+
+    When the user is prompted to write more than just a simple line of text. When several
+    paragraphs are needed it is nice to see more than just one line of text at a time.

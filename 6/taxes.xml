@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxes>
+  <taxpayer name="Nick Nedd">
+    <personalinfo>
+      <gender>Male</gender>
+      <email>nick@tick.com</email>
+      <birthdate>1976</birthdate>
+    </personalinfo>
+    <heroinfo>
+      <heroname>The Tick</heroname>
+      <spandex>true</spandex>
+      <strength>9</strength>
+      <speed>7</speed>
+      <intelligence>5</intelligence>
+    </heroinfo>
+    <taxinfo>
+      <income>90287</income>
+      <wealth>0</wealth>
+      <tax>29794</tax>
+    </taxinfo>
+  </taxpayer>
+  <taxpayer name="Bruce Wayne">
+    <personalinfo>
+      <gender>Male</gender>
+      <email>bruce@wayneenterprises.com</email>
+      <birthdate>1974</birthdate>
+    </personalinfo>
+    <heroinfo>
+      <heroname>Batman</heroname>
+      <spandex>false</spandex>
+      <strength>7</strength>
+      <speed>4</speed>
+      <intelligence>9</intelligence>
+    </heroinfo>
+    <taxinfo>
+      <income>3343891</income>
+      <wealth>50144501</wealth>
+      <tax>11132384</tax>
+    </taxinfo>
+  </taxpayer>
+  <taxpayer name="Selina Kyle">
+    <personalinfo>
+      <gender>Female</gender>
+      <email>selina@whiskas.com</email>
+      <birthdate>1997</birthdate>
+    </personalinfo>
+    <heroinfo>
+      <heroname>Catwoman</heroname>
+      <spandex>true</spandex>
+      <strength>6</strength>
+      <speed>6</speed>
+      <intelligence>9</intelligence>
+    </heroinfo>
+    <taxinfo>
+      <income>0</income>
+      <wealth>2987323</wealth>
+      <tax>597464</tax>
+    </taxinfo>
+  </taxpayer>
+</taxes>
