@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, serif;
+}
+
+input[type="checkbox"]+label {
+  text-decoration: none;
+}
+
+input[type="checkbox"]:checked+label {
+  text-decoration: line-through;
+}
