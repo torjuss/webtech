@@ -9,7 +9,7 @@
 
 <body>
 
-  <canvas id="chart" width="700" height="500"></canvas>
+  <canvas id="chart" width="800" height="500"></canvas>
 
   <script>
     const canvas = document.getElementById('chart');
@@ -37,7 +37,22 @@
     /* Insert your code here. */
     const width = 700;
     const height = 500;
-    var deltaY = 0.1 * height;
+    const deltaY = 0.1 * height;
+    const labelWidth = 40;
+    const labelHeight = 0.5 * deltaY;
+
+    // Draw a rectangle with a given color
+    function drawRectangle(x, y, sizeX, sizeY, color) {
+      context.fillStyle = color;
+      context.fillRect(x, y, sizeX, sizeY);
+      context.fillStyle = "black";
+    }
+
+    // Draw a rectangle with a given color and a description text
+    function drawRectangleWithText(text, fromX, fromY, sizeX, sizeY, color) {
+      drawRectangle(fromX, fromY, sizeX, sizeY, color);
+      drawText(text, fromX + sizeX + 10, fromY + 0.75 * sizeY);
+    }
 
     // Draw all the diagram lines
     for (var i = 10; i >= 1; i--) {
@@ -45,6 +60,12 @@
       var text = (100000 * i).toString();
       drawLineWithText(text, 50, y, width, y);
     }
+
+    // Draw the diagram labels
+    drawRectangleWithText("Income", width + 10, 0,
+      labelWidth, 0.85 * labelHeight, "red");
+    drawRectangleWithText("Wealth", width + 10, 1.1 * labelHeight,
+      labelWidth, 0.85 * labelHeight, "blue");
   </script>
 </body>
 

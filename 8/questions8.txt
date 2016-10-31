@@ -1,0 +1,24 @@
+1. What other context(s) can we get when calling getContext() on a Canvas element?
+
+    We could get "null" if the context identifier is not supported.
+
+2. How would you create a blue circle using the Canvas element? Explain with words or code.
+
+    I would create a path and use the drawing routine arc to add lines to the circle.
+    The following code, where "context" is the Canvas context, "r" is the circle radius and
+    "(x,y)" is the coordinates of the circle center point, could be used:
+
+    context.fillStyle = "blue";
+    context.beginPath();
+    context.arc(x, y, r, 0, 2 * Math.PI, true);
+    context.fill();
+    context.closePath();
+
+3. What is a more terse (also known as shorter) way of writing the loop in the following using the Array.filter method?
+
+    You could use an anonymous filter function for each list element instead of using a for loop:
+
+    const countries = ['Norway', 'Sweden', 'Denmark', 'New Zealand'];
+    var countriesStartingWithN = countries.filter(function(country) {
+      return country.startsWith('N')
+    });

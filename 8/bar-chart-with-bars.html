@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tax forms: Bar chart with lines</title>
+  <meta charset="UTF-8">
+  <script src="taxForms.js"></script>
+</head>
+
+<body>
+
+  <canvas id="chart" width="800" height="500"></canvas>
+
+  <script>
+    const canvas = document.getElementById('chart');
+    const context = canvas.getContext('2d');
+
+    /* Draw a line from (fromX, fromY) to (toX, toY) */
+    function drawLine(fromX, fromY, toX, toY) {
+      context.beginPath();
+      context.moveTo(toX, toY);
+      context.lineTo(fromX, fromY);
+      context.stroke();
+    }
+
+    /* Draw a text (string) on (x, y) */
+    function drawText(text, x, y) {
+      context.fillText(text, x, y);
+    }
+
+    /* Draw a text and with a line to its right */
+    function drawLineWithText(text, fromX, fromY, toX, toY) {
+      drawText(text, fromX - 50, fromY + 10);
+      drawLine(fromX, fromY, toX, toY);
+    }
+
+    /* Insert your code here. */
+    const width = 700;
+    const height = 500;
+    const deltaY = 0.1 * height;
+    const labelWidth = 40;
+    const labelHeight = 0.5 * deltaY;
+    const barWidth = 50;
+    const margin = 0.15 * barWidth;
+    const groupWidth = 2 * barWidth + margin;
+    const actualWidth = width - 50;
+    const barSpace = (actualWidth - taxForms.length * groupWidth) / (taxForms.length + 1);
+
+    // Draw a rectangle with a given color
+    function drawRectangle(x, y, sizeX, sizeY, color) {
+      context.fillStyle = color;
+      context.fillRect(x, y, sizeX, sizeY);
+      context.fillStyle = "black";
+    }
+
+    // Draw a rectangle with a given color and a description text
+    function drawRectangleWithText(text, fromX, fromY, sizeX, sizeY, color) {
+      drawRectangle(fromX, fromY, sizeX, sizeY, color);
+      drawText(text, fromX + sizeX + 10, fromY + 0.75 * sizeY);
+    }
+
+    // Draw a bar rectangle
+    function drawBarRectangle(fromX, sizeX, value, maxValue, height, color) {
+      var sizeY = (value / maxValue) * height;
+      fromY = height - sizeY;
+      drawRectangle(fromX, fromY, sizeX, sizeY, color);
+    }
+
+    // Draw all the diagram lines
+    for (var i = 10; i >= 1; i--) {
+      var y = (10 - i) * deltaY;
+      var text = (100000 * i).toString();
+      drawLineWithText(text, 50, y, width, y);
+    }
+
+    // Draw the diagram labels
+    drawRectangleWithText("Income", width + 10, 0,
+      labelWidth, 0.85 * labelHeight, "red");
+    drawRectangleWithText("Wealth", width + 10, 1.1 * labelHeight,
+      labelWidth, 0.85 * labelHeight, "blue");
+
+    // Draw the bars in the diagram
+    var x = 50 + barSpace;
+    for (var i = 0; i < taxForms.length; i++) {
+      var income = taxForms[i].income;
+      var wealth = taxForms[i].wealth;
+      drawBarRectangle(x, barWidth, income, 1000000, height, "red");
+      x += barWidth + margin;
+      drawBarRectangle(x, barWidth, wealth, 1000000, height, "blue");
+      x += barWidth + barSpace;
+    }
+  </script>
+</body>
+
+</html>
